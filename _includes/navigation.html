@@ -1,4 +1,4 @@
 <nav>
-  <a href="https://quantum-kat.github.io/trial/" {%if page.url == "https://quantum-kat.github.io/trial/" %}style= color: red;"{% endif %}>Home</a>
-  <a href="https://quantum-kat.github.io/trial/about" {%if page.url == "https://quantum-kat.github.io/trial/about" %}style= color: red;"{% endif %}>About</a>
+  {% for item in site.data.navigation %}
+  <a href="{{item.link}}" {%if page.url == {{item.link}} %}style= color: red;"{% endif %}> {{iten.name}} </a>
 </nav>
